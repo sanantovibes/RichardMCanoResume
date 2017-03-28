@@ -24,7 +24,6 @@ namespace RichardMCano.Website.Controllers
 
             List<TechnicalSkillsItem> technicalSkillsList = _repository.GetTechnicalSkills();
 
-            viewModel.Title = "Richard M. Cano Resume";
             viewModel.TechnicalSkillsList = technicalSkillsList;
 
             return View(viewModel);

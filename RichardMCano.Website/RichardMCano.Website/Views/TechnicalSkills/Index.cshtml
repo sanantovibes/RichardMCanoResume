@@ -1,4 +1,4 @@
-﻿@model RichardMCano.Website.Models.Home.HomeViewModel
+﻿@model RichardMCano.Website.Models.TechnicalSkills.TechnicalSkillsViewModel
 
 <!DOCTYPE html>
 <html>
@@ -7,19 +7,35 @@
     <meta name="description" content="Richard M. Cano Resume" />
 
     @Html.Partial("_HeadScripts")
-    <script src="~/Scripts/TechnicalSkills/Index.js"></script>
+    <script src="~/Scripts/Views/TechnicalSkills/Index.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1001px)" href="~/Content/CSS/TechnicalSkills/TechnicalSkills.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width 826px) and (max-width 1000px)" href="~/Content/CSS/TechnicalSkills/TechnicalSkills_1000px.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width 761px) and (max-width 825px)" href="~/Content/CSS/TechnicalSkills/TechnicalSkills_825px.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width 626px) and (max-width 760x)" href="~/Content/CSS/TechnicalSkills/TechnicalSkills_760px.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width 426px) and (max-width 625x)" href="~/Content/CSS/TechnicalSkills/TechnicalSkills_625px.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width 425x)" href="~/Content/CSS/TechnicalSkills/TechnicalSkills_425px.css">
 </head>
 
 <body>
 
     <div class="page">
         <header>
-            <a class="logo" title="Richard M. Cano Resume" href="http://localhost:62403/"><span>Richard M. Cano Resume</span></a>
+            <a class="logo" title="@Model.Title" href="http://localhost:62403/"><span>@Model.Title</span></a>
             <div class="">
                 <h1></h1>
             </div>
         </header>
         <section class="main">
+            <div class="listItems technicalSkillsList">
+                @foreach (var technicalSkills in Model.TechnicalSkillsList)
+                {
+                    <div class="btn btnTechnicalSkillsList" id="@technicalSkills.TechnicalSkillsGUID">
+                        @technicalSkills.TS_Name
+                    </div>
+                }
+            </div>
             <aside>
                 <div>
 

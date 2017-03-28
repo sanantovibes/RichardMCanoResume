@@ -18,7 +18,48 @@ namespace RichardMCano.Domain.Repositories.TechnicalSkills
         {
             List<TechnicalSkillsItem> technicalSkillsList = new List<TechnicalSkillsItem>();
 
+            SqlConnection con = new SqlConnection(_connectionString);
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader reader;
+
+            cmd.CommandText = "Resume_GetTechnicalSkillsList";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+
+            if (con != null && con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            else
+            {
+                technicalSkillsList = null;
+                return technicalSkillsList;
+            }
+
+            reader = cmd.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    var technicalSkills = ReadTechnicalSkills(reader);
+                    technicalSkillsList.Add(technicalSkills);
+                }
+            }
+
+            con.Close();
+
             return technicalSkillsList;
+        }
+
+        private TechnicalSkillsItem ReadTechnicalSkills(SqlDataReader reader)
+        {
+            TechnicalSkillsItem technicalSkill = new TechnicalSkillsItem();
+
+            technicalSkill.TechnicalSkillsGUID = new Guid(reader["TechnicalSkillsGUID"].ToString());
+            technicalSkill.TS_Name = reader["TS_Name"].ToString();
+
+            return technicalSkill;
         }
     }
 }

@@ -29,7 +29,6 @@ namespace RichardMCano.Website.Controllers
                 jobsList = _repository.GetJobs();
 
                 viewModel.Jobs = jobsList;
-                viewModel.Title = "Richard M. Cano Resume";
 
                 return View(viewModel);
             }

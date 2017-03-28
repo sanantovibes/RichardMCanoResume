@@ -21,9 +21,7 @@ namespace RichardMCano.Website.Controllers
             {
                 var viewModel = new HomeViewModel();
 
-                viewModel.Title = "Richard M. Cano Resume";
-
-                return View();
+                return View(viewModel);
             }
             catch
             {

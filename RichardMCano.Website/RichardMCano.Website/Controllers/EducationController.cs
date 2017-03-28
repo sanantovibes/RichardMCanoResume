@@ -25,7 +25,6 @@ namespace RichardMCano.Website.Controllers
                 EducationRepository _repository = new EducationRepository(_connectionString);
                 List<EducationItem> educationList = _repository.GetEducationList();
 
-                viewModel.Title = "Richard M. Cano Resume";
                 viewModel.Educations = educationList;
 
                 return View(viewModel);
