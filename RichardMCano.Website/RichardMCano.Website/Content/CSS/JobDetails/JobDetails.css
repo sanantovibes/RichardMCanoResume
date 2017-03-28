@@ -1,0 +1,25 @@
+﻿#jobName {
+    font-size: 140%;
+    font-weight: bold;
+    margin-top: 20px;
+}
+#jobDates {
+    font-style: italic;
+    color: #909090;
+    font-size: 110%;
+}
+#jobDescription {
+    margin: 20px 0;
+    width: 60%;
+}
+ul {
+    margin: 0;
+    width: 60%;
+}
+/*ul li {
+    list-style: none;
+}
+ul li span {
+    font-size: 250%;
+    line-height: 100%;
+}*/

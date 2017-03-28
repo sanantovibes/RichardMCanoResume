@@ -1,0 +1,49 @@
+﻿@model  RichardMCano.Website.Models.Jobs.JobsViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Richard M. Cano Resume</title>
+    <meta name="description" content="Richard M. Cano Resume - Jobs" />
+
+    @Html.Partial("_HeadScripts")
+    <script src="~/Scripts/Views/Jobs/Index.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1001px)" href="~/Content/CSS/Jobs/Jobs.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width 826px) and (max-width 1000px)" href="~/Content/CSS/Jobs/Jobs_1000px.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width 761px) and (max-width 825px)" href="~/Content/CSS/Jobs/Jobs_825px.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width 626px) and (max-width 760x)" href="~/Content/CSS/Jobs/Jobs_760px.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width 426px) and (max-width 625x)" href="~/Content/CSS/Jobs/Jobs_625px.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width 425x)" href="~/Content/CSS/Jobs/Jobs_425px.css">
+</head>
+<body>
+
+    <div class="page">
+        <header>
+            <a class="logo" title="Richard M. Cano Resume" href="http://localhost:62403/"><span>Richard M. Cano Resume</span></a>
+            <div class="headerBackground">
+                <h1></h1>
+            </div>
+        </header>
+        <section class="main">
+            <div class="listItems jobsList">
+                @foreach (var job in Model.Jobs)
+                {
+                    <div class="btn btnJobsList" id="@job.JobGUID">@job.JobName <span>@job.MonthStart @job.YearStart - @job.MonthEnd @job.YearEnd</span></div>
+                }
+            </div>
+            <aside></aside>
+        </section>
+        <section class="intro">
+            @Html.Partial("_sctIntro")
+        </section>
+        @Html.Partial("_Navigation")
+        <footer>
+            &copy; 2017. Richard M. Cano Resume
+        </footer>
+
+    </div>
+</body>
+</html>

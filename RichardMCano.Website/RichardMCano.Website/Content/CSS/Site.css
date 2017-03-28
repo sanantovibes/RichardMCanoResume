@@ -1,0 +1,144 @@
+﻿@import 'https://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,300,700';
+
+body { 
+        font-family: 'Open Sans', sans-serif; 
+        font-size: 1em; 
+        font-weight: 300; 
+        color: #555; 
+        margin: 0; 
+        padding: 0; 
+}
+
+/* Logo */
+.logo {
+    display: none;
+}
+
+/* Page */
+
+.page { 
+        max-width: 1200px; 
+        margin: 0 auto; 
+        position: relative; 
+}
+
+
+section.intro {
+    border-top: medium solid #555;
+    min-height: 200px;
+    margin-top: 20px;
+}
+    section.intro > aside {
+        float: left;
+        width: 33%;
+    }
+.btn {
+    cursor: pointer;
+}
+
+
+/* Header */
+header {
+    height: 230px;
+    background: #00efff url(../Images/richardmcanoresume_header.png) no-repeat center;
+    position: relative;
+}
+
+
+/* Footer */
+footer {
+    clear: both;
+    background-color: rgba(0,0,0,.65);
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 75%;
+}
+
+
+/* Navigation */
+.page > nav {
+    background-color: rgba(0,0,0,.65);
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 100%;
+}
+
+.page > nav::after { content:''; display: block; clear: both; }
+
+.page > nav ul { list-style: none; margin: 0; padding: 0; }
+
+.page > nav ul li:hover { background-color: #2b0306; }
+.page > nav ul li:hover > ul { display: block; }
+
+.page > nav div {
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    width: 125px;
+    position: relative;
+}
+
+.page > nav ul li a { 
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    width: 125px;
+    position: relative;
+}
+
+.page > nav > ul > li > div:visited { color: #fff; } /*ul li a:visited*/
+
+.page > nav > ul > li > div:hover { background-color: #f7d564; } /*ul li a:hover*/
+
+.page > nav ul ul { position: absolute; top: 100%; background-color: #2b0306; display: none; }
+
+.page > nav ul ul li { position: relative; }
+
+.page > nav ul ul ul { left: 100%; top: 0px; }
+
+/* top-level */
+
+.page > nav > ul { padding-left: 20px; }
+.page > nav > ul > li { float: left; }
+.page > nav > ul > li > div { width: auto; padding: 10px 20px 15px 20px; }
+
+.page > nav div[aria-haspopup="true"]::after { 
+    content: ''; 
+    display: block; width: 0px; height: 0px;
+    position: absolute;
+    top: 16px; right: 15px;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid #fff;
+}
+
+.page > nav [aria-haspopup="true"]::after { 
+    content: ''; 
+    display: block; width: 0px; height: 0px;
+    position: absolute;
+    top: 16px; right: 15px;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid #fff;
+}
+
+.page > nav > ul > li > div[aria-haspopup="true"]::after {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #fff;
+    left: 20px; right: auto;
+    bottom: 6px; top: auto;
+}
+
+/* List Items Menu */
+
+section.main div.listItems > div {
+    padding: 10px;
+}
+
+    section.main div.listItems > div:hover {
+        background-color: #00efff;
+    }

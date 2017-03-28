@@ -1,0 +1,39 @@
+﻿@model RichardMCano.Website.Models.Home.HomeViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Richard M. Cano Resume</title>
+    <meta name="description" content="Richard M. Cano Resume" />
+
+    @Html.Partial("_HeadScripts")
+    <script src="~/Scripts/TechnicalSkills/Index.js"></script>
+</head>
+
+<body>
+
+    <div class="page">
+        <header>
+            <a class="logo" title="Richard M. Cano Resume" href="http://localhost:62403/"><span>Richard M. Cano Resume</span></a>
+            <div class="">
+                <h1></h1>
+            </div>
+        </header>
+        <section class="main">
+            <aside>
+                <div>
+
+                </div>
+            </aside>
+        </section>
+        <section class="intro">
+            @Html.Partial("_sctIntro")
+        </section>
+        @Html.Partial("_Navigation")
+        <footer>
+            &copy; 2017. Richard M. Cano Resume
+        </footer>
+    </div>
+
+</body>
+</html>
