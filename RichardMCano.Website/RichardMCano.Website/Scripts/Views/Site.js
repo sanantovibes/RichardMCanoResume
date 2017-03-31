@@ -6,7 +6,7 @@ var id = "6257B7B5-C4D0-4D00-ACB4-350A95861B7F";
 $(document).ready(function () {
     //Navigation
     $(".btnOverview").click(function () {
-        window.location = baseUrl + "Home/Index";
+        window.location = baseUrl + "Overview/Index";
     });
     $(".btnJobs").click(function () {
         window.location = baseUrl + "Jobs/Index";
