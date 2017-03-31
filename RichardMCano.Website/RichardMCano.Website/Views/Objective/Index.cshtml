@@ -35,7 +35,10 @@
                 @Model.Applicant.ApplicantName
             </div>
             <div>
-
+                @Model.Applicant.Cell | @Model.Applicant.Home
+            </div>
+            <div>
+                @Model.Applicant.Address  @Model.Applicant.City, @Model.Applicant.State @Model.Applicant.Zip
             </div>
                 @foreach (var objective in Model.Objectives)
                 {
