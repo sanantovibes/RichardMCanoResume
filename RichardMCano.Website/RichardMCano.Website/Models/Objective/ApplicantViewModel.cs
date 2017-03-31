@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace RichardMCano.Website.Models.Home
+namespace RichardMCano.Website.Models.Objective
 {
-    public class HomeViewModel : ViewModel
+    public class ApplicantViewModel
     {
     }
 }

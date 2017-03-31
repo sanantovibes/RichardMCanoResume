@@ -57,7 +57,7 @@ namespace RichardMCano.Domain.Repositories.TechnicalSkills
             TechnicalSkillsItem technicalSkill = new TechnicalSkillsItem();
 
             technicalSkill.TechnicalSkillsGUID = new Guid(reader["TechnicalSkillsGUID"].ToString());
-            technicalSkill.TS_Name = reader["TS_Name"].ToString();
+            technicalSkill.TS_Description = reader["TS_Description"].ToString();
 
             return technicalSkill;
         }

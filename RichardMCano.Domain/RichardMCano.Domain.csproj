@@ -74,10 +74,12 @@
     <Compile Include="Models\Jobs\JobDetails.cs" />
     <Compile Include="Models\Jobs\JobTitle.cs" />
     <Compile Include="Models\Jobs\Responsibilities.cs" />
+    <Compile Include="Models\Objective\Applicant.cs" />
+    <Compile Include="Models\Objective\ObjectiveItem.cs" />
     <Compile Include="Models\TechnicalSkills\TechnicalSkillsItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Education\EducationRepository.cs" />
-    <Compile Include="Repositories\Home\HomeRepository.cs" />
+    <Compile Include="Repositories\Objective\ObjectiveRepository.cs" />
     <Compile Include="Repositories\Jobs\JobsRepository.cs" />
     <Compile Include="Repositories\TechnicalSkills\TechnicalSkillsRepository.cs" />
   </ItemGroup>

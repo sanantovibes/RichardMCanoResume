@@ -31,8 +31,8 @@
             <div class="listItems technicalSkillsList">
                 @foreach (var technicalSkills in Model.TechnicalSkillsList)
                 {
-                    <div class="btn btnTechnicalSkillsList" id="@technicalSkills.TechnicalSkillsGUID">
-                        @technicalSkills.TS_Name
+                    <div class="technicalSkillsList" id="@technicalSkills.TechnicalSkillsGUID">
+                        @technicalSkills.TS_Description
                     </div>
                 }
             </div>

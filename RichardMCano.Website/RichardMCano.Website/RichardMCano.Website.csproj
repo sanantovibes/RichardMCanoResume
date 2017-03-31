@@ -168,7 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\EducationController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ObjectiveController.cs" />
     <Compile Include="Controllers\JobsController.cs" />
     <Compile Include="Controllers\TechnicalSkillsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -176,7 +176,8 @@
     </Compile>
     <Compile Include="Models\Education\EducationDetailsViewModel.cs" />
     <Compile Include="Models\Education\EducationViewModel.cs" />
-    <Compile Include="Models\Home\HomeViewModel.cs" />
+    <Compile Include="Models\Objective\ApplicantViewModel.cs" />
+    <Compile Include="Models\Objective\ObjectiveViewModel.cs" />
     <Compile Include="Models\Jobs\JobsViewModel.cs" />
     <Compile Include="Models\TechnicalSkills\TechnicalSkillsViewModel.cs" />
     <Compile Include="Models\ViewModel.cs" />
@@ -200,6 +201,12 @@
     <Content Include="Content\CSS\JobDetails\JobDetails_625px.css" />
     <Content Include="Content\CSS\JobDetails\JobDetails_760px.css" />
     <Content Include="Content\CSS\JobDetails\JobDetails_825px.css" />
+    <Content Include="Content\CSS\Objective\Objective_425px.css" />
+    <Content Include="Content\CSS\Objective\Objective.css" />
+    <Content Include="Content\CSS\Objective\Objective_1000px.css" />
+    <Content Include="Content\CSS\Objective\Objective_625px.css" />
+    <Content Include="Content\CSS\Objective\Objective_760px.css" />
+    <Content Include="Content\CSS\Objective\Objective_825px.css" />
     <Content Include="Content\CSS\TechnicalSkills\TechnicalSkills.css" />
     <Content Include="Content\CSS\TechnicalSkills\TechnicalSkills_1000px.css" />
     <Content Include="Content\CSS\TechnicalSkills\TechnicalSkills_425px.css" />
@@ -257,7 +264,7 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\Views\Education\Detail.js" />
     <Content Include="Scripts\Views\Education\Index.js" />
-    <Content Include="Scripts\Views\Home\Index.js" />
+    <Content Include="Scripts\Views\Objective\Index.js" />
     <Content Include="Scripts\Views\Jobs\Index.js" />
     <Content Include="Scripts\Views\Jobs\Detail.js" />
     <Content Include="Scripts\Views\Site.js" />
@@ -271,9 +278,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Objective\About.cshtml" />
+    <Content Include="Views\Objective\Contact.cshtml" />
+    <Content Include="Views\Objective\Index.cshtml" />
     <Content Include="Views\Jobs\Index.cshtml" />
     <Content Include="Views\Shared\_HeadScripts.cshtml" />
     <Content Include="Views\Shared\_Navigation.cshtml" />

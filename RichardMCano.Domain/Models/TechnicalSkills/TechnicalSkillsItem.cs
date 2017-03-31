@@ -6,6 +6,6 @@ namespace RichardMCano.Domain.Models.TechnicalSkills
     public class TechnicalSkillsItem
     {
         public Guid TechnicalSkillsGUID { get; set; }
-        public string TS_Name { get; set; }
+        public string TS_Description { get; set; }
     }
 }

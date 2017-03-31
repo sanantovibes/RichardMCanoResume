@@ -1,0 +1,10 @@
+﻿.objectiveList {
+    margin: 20px 0;
+}
+
+#applicantImage {
+    border: thin solid #000;
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+}

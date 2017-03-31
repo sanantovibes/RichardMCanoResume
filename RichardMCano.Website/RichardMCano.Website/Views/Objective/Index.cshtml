@@ -1,0 +1,60 @@
+﻿@model RichardMCano.Website.Models.Objective.ObjectiveViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@Model.Title</title>
+    <meta name="description" content="Richard M. Cano Resume" />
+
+    @Html.Partial("_HeadScripts")
+    <script src="~/Scripts/Views/Objective/Index.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1001px)" href="~/Content/CSS/Objective/Objective.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width 826px) and (max-width 1000px)" href="~/Content/CSS/Objective/Objective_1000px.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width 761px) and (max-width 825px)" href="~/Content/CSS/Objective/Objective_825px.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width 626px) and (max-width 760x)" href="~/Content/CSS/Objective/Objective_760px.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width 426px) and (max-width 625x)" href="~/Content/CSS/Objective/Objective_625px.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width 425x)" href="~/Content/CSS/Objective/Objective_425px.css">
+</head>
+
+<body>
+
+    <div class="page">
+        <header>
+            <a class="logo" title="Richard M. Cano Resume" href="http://localhost:62403/"><span>Richard M. Cano Resume</span></a>
+            <div class="">
+                <h1></h1>
+            </div>
+        </header>
+        <section class="main">
+            <div id="applicantImage">
+                
+            </div>
+            <div>
+                @Model.Applicant.ApplicantName
+            </div>
+            <div>
+
+            </div>
+                @foreach (var objective in Model.Objectives)
+                {
+                    <div class="objectiveList">
+                        @objective.ObjectiveDescription
+                    </div>
+                }
+            <aside>
+                <div>
+
+                </div>
+            </aside>
+        </section>
+        <section class="intro">
+            @Html.Partial("_sctIntro")
+        </section>
+        @Html.Partial("_Navigation")
+        @Html.Partial("_Footer")
+    </div>
+
+</body>
+</html>
