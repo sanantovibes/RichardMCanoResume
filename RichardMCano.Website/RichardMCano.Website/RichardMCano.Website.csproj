@@ -167,6 +167,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\ObjectiveController.cs" />
     <Compile Include="Controllers\JobsController.cs" />
@@ -174,6 +175,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Contact\ContactViewModel.cs" />
     <Compile Include="Models\Education\EducationDetailsViewModel.cs" />
     <Compile Include="Models\Education\EducationViewModel.cs" />
     <Compile Include="Models\Objective\ApplicantViewModel.cs" />
@@ -185,6 +187,12 @@
     <Compile Include="Settings.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\CSS\Contact\Contact.css" />
+    <Content Include="Content\CSS\Contact\Contact_1000px.css" />
+    <Content Include="Content\CSS\Contact\Contact_425px.css" />
+    <Content Include="Content\CSS\Contact\Contact_625px.css" />
+    <Content Include="Content\CSS\Contact\Contact_760px.css" />
+    <Content Include="Content\CSS\Contact\Contact_825px.css" />
     <Content Include="Content\CSS\EducationDetails\EducationDetails.css" />
     <Content Include="Content\CSS\EducationDetails\EducationDetails_1000px.css" />
     <Content Include="Content\CSS\EducationDetails\EducationDetails_425px.css" />
@@ -260,6 +268,7 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\Views\Contact\Index.js" />
     <Content Include="Scripts\Views\Education\Detail.js" />
     <Content Include="Scripts\Views\Education\Index.js" />
     <Content Include="Scripts\Views\Objective\Index.js" />
@@ -284,12 +293,13 @@
     <Content Include="Views\Shared\_Navigation.cshtml" />
     <Content Include="Views\Jobs\Detail.cshtml" />
     <Content Include="Views\Education\Index.cshtml" />
-    <Content Include="Views\Shared\_sctIntro.cshtml" />
+    <Content Include="Views\Shared\_sctFeature.cshtml" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <Content Include="Views\Education\Detail.cshtml" />
     <Content Include="Views\TechnicalSkills\Index.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

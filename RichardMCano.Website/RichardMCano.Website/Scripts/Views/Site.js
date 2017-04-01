@@ -17,4 +17,7 @@ $(document).ready(function () {
     $(".btnTechnicalSkills").click(function () {
         window.location = baseUrl + "TechnicalSkills/Index";
     });
+    $(".btnContact").click(function () {
+        window.location = baseUrl + "Contact/Index";
+    });
 });

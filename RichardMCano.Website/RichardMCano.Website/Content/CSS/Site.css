@@ -22,7 +22,7 @@ body {
     position: relative;
     background-color: #fff;
 }
-section.intro .container {
+section.feature .container {
     border-top: medium solid #555;
     width: 100%; /*can be in percentage also.*/
     height: auto;
@@ -31,7 +31,7 @@ section.intro .container {
     position: relative;
     text-align: center;
 }
-    section.intro .container > aside {
+    section.feature .container > aside {
         height: 200px;
         width: 25%;
         margin: 25px 15px;
