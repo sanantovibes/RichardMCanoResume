@@ -1,12 +1,13 @@
 ﻿@import 'https://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,300,700';
 
-body { 
-        font-family: 'Open Sans', sans-serif; 
-        font-size: 1em; 
-        font-weight: 300; 
-        color: #555; 
-        margin: 0; 
-        padding: 0; 
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    color: #555;
+    background-color: #011933;
+    margin: 0;
+    padding: 0;
 }
 
 /* Logo */
@@ -15,27 +16,39 @@ body {
 }
 
 /* Page */
-
-.page { 
-        max-width: 1200px; 
-        margin: 0 auto; 
-        position: relative; 
+.page {
+    max-width: 1200px;
+    margin: -25px auto;
+    position: relative;
+    background-color: #fff;
 }
-
-
-section.intro {
+section.intro .container {
     border-top: medium solid #555;
-    min-height: 200px;
-    margin-top: 20px;
+    width: 100%; /*can be in percentage also.*/
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    text-align: center;
 }
-    section.intro > aside {
-        float: left;
-        width: 33%;
+    section.intro .container > aside {
+        height: 200px;
+        width: 25%;
+        margin: 25px 15px;
+        display: inline-block;
+        border-radius: 15px;
+        border: thin solid #555;
     }
+.gradient {
+    background: blue; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left,rgba(0,0,255,0),rgba(0,0,255,1)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(right,rgba(0,0,255,0),rgba(0,0,255,1)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(right,rgba(0,0,255,0),rgba(0,0,255,1)); /*Fx 3.6-15*/
+    background: linear-gradient(to right, rgba(0,0,255,0), rgba(0,0,255,1)); /*Standard*/
+}
 .btn {
     cursor: pointer;
 }
-
 
 /* Header */
 header {
@@ -43,7 +56,6 @@ header {
     background: #00efff url(../Images/richardmcanoresume_header.png) no-repeat center;
     position: relative;
 }
-
 
 /* Footer */
 footer {
@@ -54,91 +66,130 @@ footer {
     font-size: 75%;
 }
 
-
 /* Navigation */
 .page > nav {
     background-color: rgba(0,0,0,.65);
     position: absolute;
-    top: 0px; left: 0px;
+    top: 0; 
+    left: 0;
     width: 100%;
 }
-
-.page > nav::after { content:''; display: block; clear: both; }
-
-.page > nav ul { list-style: none; margin: 0; padding: 0; }
-
-.page > nav ul li:hover { background-color: #2b0306; }
-.page > nav ul li:hover > ul { display: block; }
-
-.page > nav div {
-    display: inline-block;
-    color: #fff;
-    font-weight: bold;
-    padding: 10px 20px;
-    text-decoration: none;
-    width: 125px;
-    position: relative;
-}
-
-.page > nav ul li a { 
-    display: inline-block;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    width: 125px;
-    position: relative;
-}
-
-.page > nav > ul > li > div:visited { color: #fff; } /*ul li a:visited*/
-
-.page > nav > ul > li > div:hover { background-color: #f7d564; } /*ul li a:hover*/
-
-.page > nav ul ul { position: absolute; top: 100%; background-color: #2b0306; display: none; }
-
-.page > nav ul ul li { position: relative; }
-
-.page > nav ul ul ul { left: 100%; top: 0px; }
+    .page > nav::after { 
+        content:''; 
+        display: block; 
+        clear: both; 
+    }
+    .page > nav ul { 
+        list-style: none; 
+        margin: 0; 
+        padding: 0; 
+    }
+    .page > nav ul li:hover { 
+        background-color: #2b0306; 
+    }
+    .page > nav ul li:hover > ul { 
+        display: block; 
+    }
+    .page > nav div {
+        display: inline-block;
+        color: #fff;
+        font-weight: bold;
+        padding: 10px 20px;
+        text-decoration: none;
+        width: 125px;
+        position: relative;
+    }
+    .page > nav ul li a { 
+        display: inline-block;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        width: 125px;
+        position: relative;
+    }
+    .page > nav > ul > li > div:visited { 
+        color: #fff; 
+    }
+    .page > nav > ul > li > div:hover { 
+        background-color: #f7d564; 
+    }
+    .page > nav ul ul { 
+        position: absolute; 
+        top: 100%; 
+        background-color: #2b0306; 
+        display: none; 
+    }
+    .page > nav ul ul li { 
+        position: relative; 
+    }
+    .page > nav ul ul ul { 
+        left: 100%; 
+        top: 0;
+    }
 
 /* top-level */
-
-.page > nav > ul { padding-left: 20px; }
-.page > nav > ul > li { float: left; }
-.page > nav > ul > li > div { width: auto; padding: 10px 20px 15px 20px; }
-
-.page > nav div[aria-haspopup="true"]::after { 
-    content: ''; 
-    display: block; width: 0px; height: 0px;
-    position: absolute;
-    top: 16px; right: 15px;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
-    border-left: 4px solid #fff;
+.page > nav > ul { 
+    padding-left: 20px; 
 }
+    .page > nav > ul > li { 
+        float: left; 
+    }
+    .page > nav > ul > li > div {
+        width: auto; 
+        padding: 10px 20px 15px 20px; 
+    }
+    .page > nav div[aria-haspopup="true"]::after { 
+        content: ''; 
+        display: block; 
+        width: 0px; 
+        height: 0px;
+        position: absolute;
+        top: 16px; 
+        right: 15px;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 4px solid #fff;
+    }
+    .page > nav [aria-haspopup="true"]::after { 
+        content: ''; 
+        display: block; 
+        width: 0px; 
+        height: 0px;
+        position: absolute;
+        top: 16px; right: 15px;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 4px solid #fff;
+    }
+    .page > nav > ul > li > div[aria-haspopup="true"]::after {
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid #fff;
+        left: 20px; 
+        right: auto;
+        bottom: 6px; 
+        top: auto;
+    }
 
-.page > nav [aria-haspopup="true"]::after { 
-    content: ''; 
-    display: block; width: 0px; height: 0px;
-    position: absolute;
-    top: 16px; right: 15px;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
-    border-left: 4px solid #fff;
+/* Section Main */
+#objective {
+    padding: 20px;
 }
-
-.page > nav > ul > li > div[aria-haspopup="true"]::after {
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 4px solid #fff;
-    left: 20px; right: auto;
-    bottom: 6px; top: auto;
+section.main #applicantName {
+    font-weight: bold;
 }
+    section.main #applicantNumber {
+        font: "Courier New", Courier, monospace;
+        font-size: .9em;
+    }
+    section.main #applicantAddress {
+        font-size: .9em;
+    }
 
 /* List Items Menu */
-
 section.main div.listItems > div {
     padding: 10px;
 }
-
     section.main div.listItems > div:hover {
         background-color: #00efff;
     }

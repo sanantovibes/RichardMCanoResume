@@ -1,8 +1,6 @@
 ﻿@media only screen and (max-width: 625px) {
     /* Header */
     header {
-        height: 120px;
-        background: #00efff url(../Images/richardmcanoresume_header_625px.png) no-repeat center;
     }
 
     /* Navigation */
@@ -12,33 +10,26 @@
         padding: 20px 15px;
         background-color: #180272;
     }
-
         .page > nav ul,
         .page > nav ul ul,
         .page > nav ul ul ul {
             display: block;
             position: static;
         }
-
         .page > nav > ul {
             padding: 0;
         }
-
             .page > nav > ul > li {
                 float: none;
                 margin-top: 25px;
             }
-
         .page > nav ul li {
             background: none;
         }
-
             .page > nav ul li:hover {
                 background-color: #180272;
-                /*#180272;*/
                 cursor: pointer;
             }
-
             .page > nav ul li a {
                 width: auto;
                 display: block;
@@ -46,27 +37,20 @@
                 padding: 8px 15px;
                 border: 1px solid rgba(255,255,255,.25);
             }
-
                 .page > nav ul li a:hover {
-                    background-color: none; /*rgba(255,255,255,.2);*/
+                    background-color: none;
                 }
-
             .page > nav ul li div:hover {
-                background-color: #180272; /*rgba(255,255,255,.2);*/
-            }
-
+                background-color: #180272;
         .page > nav ul ul {
             background: none;
         }
-
             .page > nav ul ul li a {
                 margin-left: 30px;
             }
-
             .page > nav ul ul ul li a {
                 margin-left: 60px;
             }
-
         .page > nav a[aria-haspopup="true"]::after {
             display: none;
         }

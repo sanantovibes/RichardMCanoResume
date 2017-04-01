@@ -10,11 +10,11 @@
     <script src="~/Scripts/Views/Objective/Index.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1001px)" href="~/Content/CSS/Objective/Objective.css">
-    <link rel="stylesheet" type="text/css" media="screen and (min-width 826px) and (max-width 1000px)" href="~/Content/CSS/Objective/Objective_1000px.css">
-    <link rel="stylesheet" type="text/css" media="screen and (min-width 761px) and (max-width 825px)" href="~/Content/CSS/Objective/Objective_825px.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/CSS/Objective/Objective.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width 1000px)" href="~/Content/CSS/Objective/Objective_1000px.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width 825px)" href="~/Content/CSS/Objective/Objective_825px.css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width 626px) and (max-width 760x)" href="~/Content/CSS/Objective/Objective_760px.css">
-    <link rel="stylesheet" type="text/css" media="screen and (min-width 426px) and (max-width 625x)" href="~/Content/CSS/Objective/Objective_625px.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width 625x)" href="~/Content/CSS/Objective/Objective_625px.css">
     <link rel="stylesheet" type="text/css" media="screen and (max-width 425x)" href="~/Content/CSS/Objective/Objective_425px.css">
 </head>
 
@@ -27,17 +27,17 @@
                 <h1></h1>
             </div>
         </header>
-        <section class="main">
+        <section class="main" id="objective">
             <div id="applicantImage">
                 
             </div>
-            <div>
+            <div id="applicantName">
                 @Model.Applicant.ApplicantName
             </div>
-            <div>
+            <div id="applicantNumber">
                 @Model.Applicant.Cell | @Model.Applicant.Home
             </div>
-            <div>
+            <div id="applicantAddress">
                 @Model.Applicant.Address  @Model.Applicant.City, @Model.Applicant.State @Model.Applicant.Zip
             </div>
                 @foreach (var objective in Model.Objectives)
