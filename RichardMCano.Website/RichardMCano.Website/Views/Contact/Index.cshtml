@@ -28,6 +28,18 @@
             </div>
         </header>
         <section class="main" id="contact">
+            <div class="applicantImage">
+
+            </div>
+            <div class="applicantName">
+                @Model.Applicant.ApplicantName
+            </div>
+            <div class="applicantNumber">
+                @Model.Applicant.Cell | @Model.Applicant.Home
+            </div>
+            <div class="applicantAddress">
+                @Model.Applicant.Address  @Model.Applicant.City, @Model.Applicant.State @Model.Applicant.Zip
+            </div>
             @*@foreach (var objective in Model.Objectives)
             {
                 <div class="objectiveList">

@@ -28,16 +28,16 @@
             </div>
         </header>
         <section class="main" id="objective">
-            <div id="applicantImage">
+            <div class="applicantImage">
                 
             </div>
-            <div id="applicantName">
+            <div class="applicantName">
                 @Model.Applicant.ApplicantName
             </div>
-            <div id="applicantNumber">
+            <div class="applicantNumber">
                 @Model.Applicant.Cell | @Model.Applicant.Home
             </div>
-            <div id="applicantAddress">
+            <div class="applicantAddress">
                 @Model.Applicant.Address  @Model.Applicant.City, @Model.Applicant.State @Model.Applicant.Zip
             </div>
                 @foreach (var objective in Model.Objectives)

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Web;
 using System.Web.Mvc;
+using RichardMCano.Domain.Models.Objective;
+using RichardMCano.Domain.Repositories.Contact;
 using RichardMCano.Website.Models.Contact;
 
 namespace RichardMCano.Website.Controllers
@@ -25,6 +27,11 @@ namespace RichardMCano.Website.Controllers
                 }
 
                 var viewModel = new ContactViewModel();
+                ContactRepository _repository = new ContactRepository(_connectionString);
+
+                Applicant applicant = _repository.GetApplicant(resumeGUID);
+
+                viewModel.Applicant = _repository.GetApplicant(resumeGUID);
 
                 return View(viewModel);
             }
