@@ -29,9 +29,11 @@ namespace RichardMCano.Website.Controllers
 
                 var viewModel = new EducationViewModel();
                 EducationRepository _repository = new EducationRepository(_connectionString);
-                List<EducationItem> educationList = _repository.GetEducationList();
-                Applicant applicant = _repository.GetApplicant(resumeGUID);
 
+                Applicant applicant = _repository.GetApplicant(resumeGUID);
+                List<EducationItem> educationList = _repository.GetEducationList();
+
+                viewModel.Applicant = applicant;
                 viewModel.Educations = educationList;
 
                 return View(viewModel);
@@ -67,6 +69,7 @@ namespace RichardMCano.Website.Controllers
                 }
 
                 viewModel.Title = "Richard M. Cano Resume";
+                viewModel.Applicant = applicant;
                 viewModel.Education = education;
                 viewModel.MinorList = minorList;
                 viewModel.Applicant = applicant;

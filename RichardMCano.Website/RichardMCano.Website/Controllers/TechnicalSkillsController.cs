@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Web;
 using System.Web.Mvc;
+using RichardMCano.Domain.Models.Objective;
 using RichardMCano.Domain.Models.TechnicalSkills;
 using RichardMCano.Domain.Repositories.TechnicalSkills;
 using RichardMCano.Website.Models.TechnicalSkills;
@@ -29,8 +30,10 @@ namespace RichardMCano.Website.Controllers
                 TechnicalSkillsViewModel viewModel = new TechnicalSkillsViewModel();
                 TechnicalSkillsRepository _repository = new TechnicalSkillsRepository(_connectionString);
 
+                Applicant applicant = _repository.GetApplicant(resumeGUID);
                 List<TechnicalSkillsItem> technicalSkillsList = _repository.GetTechnicalSkills();
 
+                viewModel.Applicant = applicant;
                 viewModel.TechnicalSkillsList = technicalSkillsList;
 
                 return View(viewModel);

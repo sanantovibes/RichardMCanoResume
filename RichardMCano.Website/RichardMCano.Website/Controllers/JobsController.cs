@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.Mvc;
 using RichardMCano.Domain.Models.Jobs;
+using RichardMCano.Domain.Models.Objective;
 using RichardMCano.Domain.Repositories.Jobs;
 using RichardMCano.Website.Models.Jobs;
 
@@ -28,11 +29,13 @@ namespace RichardMCano.Website.Controllers
 
                 JobsRepository _repository = new JobsRepository(_connectionString);
 
+                Applicant applicant = _repository.GetApplicant(resumeGUID);
                 List<Job> jobsList;
                 var viewModel = new JobsViewModel();
 
                 jobsList = _repository.GetJobs();
 
+                viewModel.Applicant = applicant;
                 viewModel.Jobs = jobsList;
 
                 return View(viewModel);
@@ -56,10 +59,12 @@ namespace RichardMCano.Website.Controllers
                 var viewModel = new JobsViewModel();
                 JobsRepository _repository = new JobsRepository(_connectionString);
 
-                var jobsDetail = _repository.GetJobDetails(id);
+                Applicant applicant = _repository.GetApplicant(resumeGUID);
+                JobDetails jobsDetail = _repository.GetJobDetails(id);
                 var responsibilities = _repository.GetResponsibilities(id);
 
                 viewModel.Title = "Richard M. Cano Resume";
+                viewModel.Applicant = applicant;
                 viewModel.JobDetails = jobsDetail;
                 viewModel.Responsibilities = responsibilities;
 
