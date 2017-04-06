@@ -1,6 +1,13 @@
 ﻿@media only screen and (max-width: 825px) {
     /* Header */
     header {
-        
+        height: 158px;
+        background: #00efff url(../Images/richardmcanoresume_header_825px.png) no-repeat center;
+        position: relative;
+    }
+
+    /* Navigation */
+    .page > nav {
+        font-size: .9em;
     }
 }

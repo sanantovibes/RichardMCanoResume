@@ -2001,7 +2001,7 @@ intellisense.annotate(jQuery.fn, {
   'outerHeight': function() {
     /// <signature>
     ///   <summary>Get the current computed height for the first element in the set of matched elements, including padding, border, and optionally 
-      //. Returns an integer (without "px") representation of the value or null if called on an empty set of elements.</summary >
+    ///.Returns an integer (without "px") representation of the value or null if called on an empty set of elements.</summary >
     ///   <param name="includeMargin" type="Boolean">A Boolean indicating whether to include the element's margin in the calculation.</param>
     ///   <returns type="Number" />
     /// </signature>

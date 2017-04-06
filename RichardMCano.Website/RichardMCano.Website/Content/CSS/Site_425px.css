@@ -1,6 +1,26 @@
 ﻿@media only screen and (max-width: 425px) {
     /* Header */
     header {
-        
+        height: 81px;
+        background: #00efff url(../Images/richardmcanoresume_header_425px.png) no-repeat center;
+        position: relative;
     }
+
+    section.feature .container {
+        border-top: medium solid #555;
+        width: 100%; /*can be in percentage also.*/
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        text-align: center;
+    }
+        section.feature .container > aside {
+            height: 200px;
+            width: 90%;
+            margin: 10px auto;
+            display: block;
+            border-radius: 15px;
+            border: thin solid #555;
+        }
 }

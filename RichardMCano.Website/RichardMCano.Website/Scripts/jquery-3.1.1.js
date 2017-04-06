@@ -3,7 +3,7 @@
  * https://jquery.com/
  *
  * Includes Sizzle.js
- * https://sizzlejs.com/
+ * https://sizzlejs.com
  *
  * Copyright jQuery Foundation and other contributors
  * Released under the MIT license
@@ -6596,7 +6596,7 @@ jQuery.each( {
 		}
 	};
 
-	if ( !rmargin.test( prefix ) ) {
+	if ( !r.test( prefix ) ) {
 		jQuery.cssHooks[ prefix + suffix ].set = setPositiveNumber;
 	}
 } );

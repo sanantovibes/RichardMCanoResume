@@ -1,6 +1,9 @@
 ﻿@media only screen and (max-width: 625px) {
     /* Header */
     header {
+        height: 120px;
+        background: #00efff url(../Images/richardmcanoresume_header_625px.png) no-repeat center;
+        position: relative;
     }
 
     /* Navigation */
@@ -42,6 +45,7 @@
                 }
             .page > nav ul li div:hover {
                 background-color: #180272;
+            }
         .page > nav ul ul {
             background: none;
         }
