@@ -172,10 +172,13 @@ footer {
     }
 
 /* Section Main */
-#objective {
+/*#objective {
     padding: 20px;
 }
 #contact {
+    padding: 20px;
+}*/
+section.main .applicantProfile {
     padding: 20px;
 }
 section.main .applicantImage {

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace RichardMCano.Website.Models.Objective
 {
-    public class ApplicantViewModel
+    public class ApplicantViewModel : ViewModel
     {
     }
 }

@@ -17,16 +17,28 @@ namespace RichardMCano.Website.Controllers
             _connectionString = Settings.GetConnectionString();
         }
 
-        public ActionResult Index()
+        public ActionResult Index(string resumeGUID)
         {
-            TechnicalSkillsViewModel viewModel = new TechnicalSkillsViewModel();
-            TechnicalSkillsRepository _repository = new TechnicalSkillsRepository(_connectionString);
+            try
+            {
+                if (resumeGUID == null || string.IsNullOrWhiteSpace(resumeGUID))
+                {
+                    resumeGUID = "6257B7B5-C4D0-4D00-ACB4-350A95861B7F";
+                }
 
-            List<TechnicalSkillsItem> technicalSkillsList = _repository.GetTechnicalSkills();
+                TechnicalSkillsViewModel viewModel = new TechnicalSkillsViewModel();
+                TechnicalSkillsRepository _repository = new TechnicalSkillsRepository(_connectionString);
 
-            viewModel.TechnicalSkillsList = technicalSkillsList;
+                List<TechnicalSkillsItem> technicalSkillsList = _repository.GetTechnicalSkills();
 
-            return View(viewModel);
+                viewModel.TechnicalSkillsList = technicalSkillsList;
+
+                return View(viewModel);
+            }
+            catch
+            {
+                return View("Error");
+            }
         }
     }
 }

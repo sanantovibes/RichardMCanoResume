@@ -286,8 +286,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Objective\About.cshtml" />
-    <Content Include="Views\Objective\Contact.cshtml" />
     <Content Include="Views\Objective\Index.cshtml" />
     <Content Include="Views\Jobs\Index.cshtml" />
     <Content Include="Views\Shared\_HeadScripts.cshtml" />
@@ -301,6 +299,7 @@
     <Content Include="Views\TechnicalSkills\Index.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Shared\_ApplicantProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

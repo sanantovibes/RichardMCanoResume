@@ -17,10 +17,15 @@ namespace RichardMCano.Website.Controllers
             _connectionString = Settings.GetConnectionString();
         }
 
-        public ActionResult Index()
+        public ActionResult Index(string resumeGUID)
         {
             try
             {
+                if (resumeGUID == null || string.IsNullOrWhiteSpace(resumeGUID))
+                {
+                    resumeGUID = "6257B7B5-C4D0-4D00-ACB4-350A95861B7F";
+                }
+
                 JobsRepository _repository = new JobsRepository(_connectionString);
 
                 List<Job> jobsList;
@@ -39,10 +44,15 @@ namespace RichardMCano.Website.Controllers
         }
 
 
-        public ActionResult Detail(Guid id)
+        public ActionResult Detail(Guid id, string resumeGUID)
         {
             try
             {
+                if (resumeGUID == null || string.IsNullOrWhiteSpace(resumeGUID))
+                {
+                    resumeGUID = "6257B7B5-C4D0-4D00-ACB4-350A95861B7F";
+                }
+
                 var viewModel = new JobsViewModel();
                 JobsRepository _repository = new JobsRepository(_connectionString);
 
