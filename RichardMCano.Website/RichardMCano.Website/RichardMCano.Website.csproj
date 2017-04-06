@@ -226,6 +226,7 @@
     <Content Include="Content\CSS\Site_625px.css" />
     <Content Include="Content\CSS\Site_760px.css" />
     <Content Include="Content\CSS\Site_825px.css" />
+    <Content Include="Content\Images\RichardMCanoProfile.png" />
     <Content Include="Content\Images\richardmcanoresume_header.png" />
     <Content Include="Content\CSS\JobDetails\JobDetails.css" />
     <Content Include="Content\CSS\JobDetails\JobDetails_1000px.css" />

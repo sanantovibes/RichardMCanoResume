@@ -184,6 +184,7 @@ section.main .applicantImage {
     width: 100px;
     height: 100px;
     margin-bottom: 10px;
+    background: #000 url(../Images/RichardMCanoProfile.png) no-repeat center;
 }
     section.main .applicantName {
         font-weight: bold;
