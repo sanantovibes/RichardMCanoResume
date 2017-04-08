@@ -101,7 +101,7 @@ namespace RichardMCano.Domain.Repositories.Education
             {
                 while (reader.Read())
                 {
-                    education = ReadEducations(reader);
+                    education = ReadEducation(reader);
                 }
             }
 
