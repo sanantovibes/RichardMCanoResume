@@ -88,6 +88,9 @@ footer {
     color: #f8f8f8;
     text-align: center;
     font-size: 75%;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
 }
 
 /* Navigation */
@@ -212,13 +215,6 @@ footer {
         top: auto;
     }
 
-/* Section Main */
-/*#objective {
-    padding: 20px;
-}
-#contact {
-    padding: 20px;
-}*/
 section.main .applicantProfile {
     padding: 20px;
 }
@@ -245,7 +241,7 @@ section.main .applicantAddress {
     font-size: .9em;
 }
 
-/* List Items Menu */
+/* List Items */
 section.main div.listItems > div {
     padding: 10px 20px;
 }
