@@ -29,7 +29,7 @@
         </header>
         <section class="main">
             @Html.Partial("_ApplicantProfile")
-            <div class="listItems technicalSkillsList">
+            <div class="technicalSkillsList">
                 @foreach (var technicalSkills in Model.TechnicalSkillsList)
                 {
                     <div class="technicalSkillsList" id="@technicalSkills.TechnicalSkillsGUID">

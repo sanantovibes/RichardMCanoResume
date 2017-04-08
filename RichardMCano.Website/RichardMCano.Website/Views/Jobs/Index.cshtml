@@ -32,7 +32,7 @@
             <div class="listItems jobsList">
                 @foreach (var job in Model.Jobs)
                 {
-                    <div class="btn btnJobsList" id="@job.JobGUID">@job.JobName <span>@job.MonthStart @job.YearStart - @job.MonthEnd @job.YearEnd</span></div>
+                    <div class="btnList btnJobsList" id="@job.JobGUID">@job.JobName <span>@job.MonthStart @job.YearStart - @job.MonthEnd @job.YearEnd</span></div>
                 }
             </div>
             <aside></aside>

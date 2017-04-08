@@ -22,6 +22,7 @@ body {
     position: relative;
     background-color: #fff;
 }
+
 section.feature .container {
     border-top: medium solid #555;
     width: 100%; /*can be in percentage also.*/
@@ -31,6 +32,7 @@ section.feature .container {
     position: relative;
     text-align: center;
 }
+
     section.feature .container > aside {
         height: 200px;
         width: 25%;
@@ -39,6 +41,7 @@ section.feature .container {
         border-radius: 15px;
         border: thin solid #555;
     }
+
 .gradient {
     background: blue; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(left,rgba(0,0,255,0),rgba(0,0,255,1)); /*Safari 5.1-6*/
@@ -46,8 +49,29 @@ section.feature .container {
     background: -moz-linear-gradient(right,rgba(0,0,255,0),rgba(0,0,255,1)); /*Fx 3.6-15*/
     background: linear-gradient(to right, rgba(0,0,255,0), rgba(0,0,255,1)); /*Standard*/
 }
+
+.btnMenu {
+    cursor: pointer;
+}
+
+.btnList {
+    cursor: pointer;
+}
+
 .btn {
     cursor: pointer;
+    margin: 10px;
+    padding: 10px;
+    border: medium solid #1a0453;
+    background-color: #6b72ff;
+    color: #fff;
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 /* Header */
@@ -70,26 +94,31 @@ footer {
 .page > nav {
     background-color: rgba(0,0,0,.65);
     position: absolute;
-    top: 0; 
+    top: 0;
     left: 0;
     width: 100%;
 }
-    .page > nav::after { 
-        content:''; 
-        display: block; 
-        clear: both; 
+
+    .page > nav::after {
+        content: '';
+        display: block;
+        clear: both;
     }
-    .page > nav ul { 
-        list-style: none; 
-        margin: 0; 
-        padding: 0; 
+
+    .page > nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
-    .page > nav ul li:hover { 
-        background-color: #2b0306; 
-    }
-    .page > nav ul li:hover > ul { 
-        display: block; 
-    }
+
+        .page > nav ul li:hover {
+            background-color: #2b0306;
+        }
+
+            .page > nav ul li:hover > ul {
+                display: block;
+            }
+
     .page > nav div {
         display: inline-block;
         color: #fff;
@@ -99,7 +128,8 @@ footer {
         width: 125px;
         position: relative;
     }
-    .page > nav ul li a { 
+
+    .page > nav ul li a {
         display: inline-block;
         color: #fff;
         padding: 10px 20px;
@@ -107,67 +137,78 @@ footer {
         width: 125px;
         position: relative;
     }
-    .page > nav > ul > li > div:visited { 
-        color: #fff; 
-    }
-    .page > nav > ul > li > div:hover { 
-        background-color: #f7d564; 
-    }
-    .page > nav ul ul { 
-        position: absolute; 
-        top: 100%; 
-        background-color: #2b0306; 
-        display: none; 
-    }
-    .page > nav ul ul li { 
-        position: relative; 
-    }
-    .page > nav ul ul ul { 
-        left: 100%; 
-        top: 0;
+
+    .page > nav > ul > li > div:visited {
+        color: #fff;
     }
 
-/* top-level */
-.page > nav > ul { 
-    padding-left: 20px; 
-}
-    .page > nav > ul > li { 
-        float: left; 
+    .page > nav > ul > li > div:hover {
+        background-color: #f7d564;
     }
-    .page > nav > ul > li > div {
-        width: auto; 
-        padding: 10px 20px 15px 20px; 
+
+    .page > nav ul ul {
+        position: absolute;
+        top: 100%;
+        background-color: #2b0306;
+        display: none;
     }
-    .page > nav div[aria-haspopup="true"]::after { 
-        content: ''; 
-        display: block; 
-        width: 0px; 
+
+        .page > nav ul ul li {
+            position: relative;
+        }
+
+        .page > nav ul ul ul {
+            left: 100%;
+            top: 0;
+        }
+
+    /* top-level */
+    .page > nav > ul {
+        padding-left: 20px;
+    }
+
+        .page > nav > ul > li {
+            float: left;
+        }
+
+            .page > nav > ul > li > div {
+                width: auto;
+                padding: 10px 20px 15px 20px;
+            }
+
+    .page > nav div[aria-haspopup="true"]::after {
+        content: '';
+        display: block;
+        width: 0px;
         height: 0px;
         position: absolute;
-        top: 16px; 
+        top: 16px;
         right: 15px;
         border-top: 4px solid transparent;
         border-bottom: 4px solid transparent;
         border-left: 4px solid #fff;
     }
-    .page > nav [aria-haspopup="true"]::after { 
-        content: ''; 
-        display: block; 
-        width: 0px; 
+
+    .page > nav [aria-haspopup="true"]::after {
+        content: '';
+        display: block;
+        width: 0px;
         height: 0px;
         position: absolute;
-        top: 16px; right: 15px;
+        top: 16px;
+        right: 15px;
         border-top: 4px solid transparent;
         border-bottom: 4px solid transparent;
         border-left: 4px solid #fff;
     }
+
     .page > nav > ul > li > div[aria-haspopup="true"]::after {
         border-left: 4px solid transparent;
         border-right: 4px solid transparent;
         border-top: 4px solid #fff;
-        left: 20px; 
+        left: 20px;
         right: auto;
-        bottom: 6px; 
+        bottom: 6px;
         top: auto;
     }
 
@@ -181,6 +222,7 @@ footer {
 section.main .applicantProfile {
     padding: 20px;
 }
+
 section.main .applicantImage {
     border: thin solid #000;
     margin-top: 10px;
@@ -189,21 +231,32 @@ section.main .applicantImage {
     margin-bottom: 10px;
     background: #000 url(../Images/RichardMCanoProfile.png) no-repeat center;
 }
-    section.main .applicantName {
-        font-weight: bold;
-    }
-    section.main .applicantNumber {
-        font: "Courier New", Courier, monospace;
-        font-size: .9em;
-    }
-    section.main .applicantAddress {
-        font-size: .9em;
-    }
+
+section.main .applicantName {
+    font-weight: bold;
+}
+
+section.main .applicantNumber {
+    font: "Courier New", Courier, monospace;
+    font-size: .9em;
+}
+
+section.main .applicantAddress {
+    font-size: .9em;
+}
 
 /* List Items Menu */
 section.main div.listItems > div {
-    padding: 10px;
+    padding: 10px 20px;
 }
+    section.main div.details > div {
+        padding: 0 20px;
+    }
     section.main div.listItems > div:hover {
-        background-color: #00efff;
+        background-color: #a8b9fe;
+    }
+
+    section.main div .technicalSkillsList {
+        background-color: none;
+        padding: 10px 20px;
     }
