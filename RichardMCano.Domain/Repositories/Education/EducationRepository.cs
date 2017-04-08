@@ -16,61 +16,6 @@ namespace RichardMCano.Domain.Repositories.Education
             _connectionString = connectionString;
         }
 
-        public Applicant GetApplicant(string resumeGUID)
-        {
-            Applicant applicant = new Applicant();
-
-            SqlConnection con = new SqlConnection(_connectionString);
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader reader;
-
-            cmd.CommandText = "Resume_GetApplicant";
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Connection = con;
-
-            cmd.Parameters.AddWithValue("@ResumeGUID", resumeGUID);
-
-            if (con != null && con.State == ConnectionState.Closed)
-            {
-                con.Open();
-            }
-            else
-            {
-                applicant = null;
-                return applicant;
-            }
-
-            reader = cmd.ExecuteReader();
-
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    applicant = ReadApplicant(reader);
-                }
-            }
-
-            con.Close();
-
-            return applicant;
-        }
-
-        private Applicant ReadApplicant(SqlDataReader reader)
-        {
-            Applicant applicant = new Applicant();
-
-            applicant.ApplicantName = reader["ApplicantName"].ToString();
-            applicant.Cell = reader["Cell"].ToString();
-            applicant.Home = reader["Home"].ToString();
-            applicant.Email = reader["Email"].ToString();
-            applicant.Address = reader["Address"].ToString();
-            applicant.City = reader["City"].ToString();
-            applicant.State = reader["State"].ToString();
-            applicant.Zip = reader["Zip"].ToString();
-
-            return applicant;
-        }
-
         public List<EducationItem> GetEducationList ()
         {
             List<EducationItem> educationList = new List<EducationItem>();
@@ -125,7 +70,7 @@ namespace RichardMCano.Domain.Repositories.Education
             return education;
         }
 
-        public EducationItem GetEducationDetails(Guid resumeGUID)
+        public EducationItem GetEducationDetails(string resumeGUID, Guid educationGUID)
         {
             EducationItem education = new EducationItem();
 
@@ -138,6 +83,7 @@ namespace RichardMCano.Domain.Repositories.Education
             cmd.Connection = con;
 
             cmd.Parameters.AddWithValue("@ResumeGUID", resumeGUID);
+            cmd.Parameters.AddWithValue("@EducationGUID", educationGUID);
 
             if (con != null && con.State == ConnectionState.Closed)
             {

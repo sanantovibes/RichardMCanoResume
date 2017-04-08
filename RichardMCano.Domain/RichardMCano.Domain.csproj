@@ -83,6 +83,7 @@
     <Compile Include="Repositories\Education\EducationRepository.cs" />
     <Compile Include="Repositories\Objective\ObjectiveRepository.cs" />
     <Compile Include="Repositories\Jobs\JobsRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Repositories\TechnicalSkills\TechnicalSkillsRepository.cs" />
   </ItemGroup>
   <ItemGroup>

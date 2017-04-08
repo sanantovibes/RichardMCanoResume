@@ -4,6 +4,7 @@ using System.Web;
 using System.Web.Mvc;
 using RichardMCano.Domain.Models.Jobs;
 using RichardMCano.Domain.Models.Objective;
+using RichardMCano.Domain.Repositories;
 using RichardMCano.Domain.Repositories.Jobs;
 using RichardMCano.Website.Models.Jobs;
 
@@ -27,9 +28,10 @@ namespace RichardMCano.Website.Controllers
                     resumeGUID = "6257B7B5-C4D0-4D00-ACB4-350A95861B7F";
                 }
 
+                Repository _repositoryMain = new Repository(_connectionString);
                 JobsRepository _repository = new JobsRepository(_connectionString);
 
-                Applicant applicant = _repository.GetApplicant(resumeGUID);
+                Applicant applicant = _repositoryMain.GetApplicant(resumeGUID);
                 List<Job> jobsList;
                 var viewModel = new JobsViewModel();
 
@@ -57,9 +59,10 @@ namespace RichardMCano.Website.Controllers
                 }
 
                 var viewModel = new JobsViewModel();
+                Repository _repositoryMain = new Repository(_connectionString);
                 JobsRepository _repository = new JobsRepository(_connectionString);
 
-                Applicant applicant = _repository.GetApplicant(resumeGUID);
+                Applicant applicant = _repositoryMain.GetApplicant(resumeGUID);
                 JobDetails jobsDetail = _repository.GetJobDetails(id);
                 var responsibilities = _repository.GetResponsibilities(id);
 

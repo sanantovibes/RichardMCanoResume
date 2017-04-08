@@ -4,6 +4,7 @@ using System.Web;
 using System.Web.Mvc;
 using RichardMCano.Domain.Models.Education;
 using RichardMCano.Domain.Models.Objective;
+using RichardMCano.Domain.Repositories;
 using RichardMCano.Domain.Repositories.Education;
 using RichardMCano.Website.Models.Education;
 
@@ -28,9 +29,10 @@ namespace RichardMCano.Website.Controllers
                 }
 
                 var viewModel = new EducationViewModel();
+                Repository _repositoryMain = new Repository(_connectionString);
                 EducationRepository _repository = new EducationRepository(_connectionString);
 
-                Applicant applicant = _repository.GetApplicant(resumeGUID);
+                Applicant applicant = _repositoryMain.GetApplicant(resumeGUID);
                 List<EducationItem> educationList = _repository.GetEducationList();
 
                 viewModel.Applicant = applicant;
@@ -54,10 +56,11 @@ namespace RichardMCano.Website.Controllers
                 }
 
                 var viewModel = new EducationDetailsViewModel();
+                Repository _repositoryMain = new Repository(_connectionString);
                 EducationRepository _repository = new EducationRepository(_connectionString);
 
-                Applicant applicant = _repository.GetApplicant(resumeGUID);
-                EducationItem education = _repository.GetEducationDetails(id);
+                Applicant applicant = _repositoryMain.GetApplicant(resumeGUID);
+                EducationItem education = _repository.GetEducationDetails(resumeGUID, id);
                 List<MinorItem> minorList = _repository.GetMinorList(id);
 
                 if (education.IsGraduated == true)
