@@ -41,6 +41,9 @@ section.feature .container {
         border-radius: 15px;
         border: thin solid #555;
     }
+    section.feature #pdf {
+        background: #fff url(../Images/PDF_Website.png) no-repeat center;
+    }
 
 .gradient {
     background: blue; /* For browsers that do not support gradients */
