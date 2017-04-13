@@ -5,4 +5,8 @@
         background: #00efff url(../Images/richardmcanoresume_header_1000px.png) no-repeat center;
         position: relative;
     }
+
+    section.feature #pdf {
+        background: #fff url(../Images/PDF_Website_250px.png) no-repeat center;
+    }
 }

@@ -58,4 +58,8 @@
         .page > nav a[aria-haspopup="true"]::after {
             display: none;
         }
+
+    section.feature #pdf {
+        background: #fff url('../Images/PDF_Website_250bpx.png') no-repeat center;
+    }
 }

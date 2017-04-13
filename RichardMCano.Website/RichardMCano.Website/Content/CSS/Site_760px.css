@@ -10,4 +10,8 @@
     .page > nav {
         font-size: .8em;
     }
+
+    section.feature #pdf {
+        background: #fff url('../Images/PDF_Website_250bpx.png') no-repeat center;
+    }
 }
