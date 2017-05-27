@@ -59,7 +59,7 @@
             display: none;
         }
 
-    section.feature #pdf {
+    .feature #pdf {
         background: #fff url('../Images/PDF_Website_250bpx.png') no-repeat center;
     }
 

@@ -185,8 +185,8 @@ footer {
     .page > nav div[aria-haspopup="true"]::after {
         content: '';
         display: block;
-        width: 0px;
-        height: 0px;
+        width: 0;
+        height: 0;
         position: absolute;
         top: 16px;
         right: 15px;
@@ -198,8 +198,8 @@ footer {
     .page > nav [aria-haspopup="true"]::after {
         content: '';
         display: block;
-        width: 0px;
-        height: 0px;
+        width: 0;
+        height: 0;
         position: absolute;
         top: 16px;
         right: 15px;

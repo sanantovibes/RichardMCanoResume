@@ -6,7 +6,7 @@
         position: relative;
     }
 
-    section.feature #pdf {
+    .feature #pdf {
         background: #fff url(../Images/PDF_Website_250px.png) no-repeat center;
     }
 
