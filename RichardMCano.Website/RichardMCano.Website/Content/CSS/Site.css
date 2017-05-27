@@ -218,6 +218,8 @@ footer {
         top: auto;
     }
 
+
+/* Applicant Profile */
 section.main .applicantProfile {
     padding: 20px;
 }
@@ -233,15 +235,25 @@ section.main .applicantImage {
 
 section.main .applicantName {
     font-weight: bold;
+    color: #4ac3be;
+    font-size: 2.6em;
 }
 
 section.main .applicantNumber {
     font: "Courier New", Courier, monospace;
-    font-size: .9em;
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
 section.main .applicantAddress {
-    font-size: .9em;
+    font-size: 1em;
+    font-weight: bold;
+    color: #e89e0c;
+}
+
+section.main .objectiveList {
+    font: "Times New Roman", serif;
+    font-size: 1.2em;
 }
 
 /* List Items */

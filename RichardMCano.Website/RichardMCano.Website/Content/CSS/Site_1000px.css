@@ -9,4 +9,21 @@
     section.feature #pdf {
         background: #fff url(../Images/PDF_Website_250px.png) no-repeat center;
     }
+
+    /* Applicant Profile */
+section.main .applicantName {
+    font-size: 1.9em;
+}
+
+    section.main .applicantNumber {
+        font-size: 1.2em;
+    }
+
+    section.main .applicantAddress {
+        font-size: 1em;
+    }
+
+    section.main .objectiveList {
+        font-size: .9em;
+    }
 }

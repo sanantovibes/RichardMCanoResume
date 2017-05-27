@@ -20,4 +20,8 @@ $(document).ready(function () {
     $(".btnContact").click(function () {
         window.location = baseUrl + "Contact/Index";
     });
+    $("#pdf").click(function () {
+        window.open("http//richardmcano.com/Files/ResumePDFs/Richard_M_Cano_Resume_SoftwareDeveloper_Description_2016.pdf");
+        return false;
+    });
 });
